@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Raleway:wght@300;400;500;600;700&display=swap');
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    transition: all .2s linear;
+    text-transform: capitalize;
+}
+
+:root{
+    --main-color:#fd4646;
+    --text-color: #171427;
+    --bg-color:var(--bg-color);
+    --bg-color: #fff;
+    --scroll-bar-color: hsl(250, 12%, 90%);
+    --scroll-thumb-color: hsl(250, 12%, 80%);
+} 
+body{
+    color: var(--text-color);
+}
+
+/* font */
+@font-face{
+    font-family:"Raleway-regular";
+    src:url(../fonts/Raleway-Regular.ttf);
+}
+@font-face{
+    font-family:"Raleway-medium";
+    src:url(../fonts/Raleway-Medium.ttf);
+}
+@font-face{
+    font-family:"Raleway-bold";
+    src:url(../fonts/Raleway-Bold.ttf);
+}
+@font-face{
+    font-family:"Raleway-extrabold";
+    src:url(../fonts/Raleway-ExtraBold.ttf);
+}
+@font-face{
+    font-family:"Raleway-semibold";
+    src:url(../fonts/Raleway-SemiBold.ttf);
+}
+@font-face{
+    font-family:"Raleway-black";
+    src:url(../fonts/Raleway-Black.ttf);
+}
+
+
+/* colors */
+
+:root{
+    --primary:#EEBF00;
+    --secondary:#232838;
+    --ternary:#6c6c6c;
+    --danger:#FE4545;
+    --pure:#FEFEFE;
+    --light:#F0F0F0;
+    --heaven:#FFFFFF;
+    --footer:#2D333F;
+}
+
+
+
+/* reset maintenir le 1er nav intacte*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    -webkit-font-smoothing:antialiased;
+    height: 4000px;
+}
+.container{ /* all the container*/
+    width: 100%;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+/*----header-----*/
+
+header.topbar{
+    background:var(--secondary);
+    color: var(--pure);/*for span |*/
+    padding: 0.75rem 0;
+}
+header.topbar .auth > div a{ 
+    color: var(--pure);/* couleur des links a*/
+    text-decoration: none;
+    font-family:"Raleway-semibold" ;
+}
+header.topbar .icons a{
+    margin-right: 0.6rem;
+}
+header.topbar .auth .divider{
+    padding: 0 1rem;
+}
+header.topbar .auth > div img{
+    margin-right: 0.35rem;
+}
+.flex{
+    display: flex;
+}
+.justify-between{
+    justify-content: space-between ;
+}
+.items-center{
+    align-items: center;
+}
+
+/*----search form*/
+
+.topbar .search-form{
+    position: absolute;
+    top: 08%;
+    left: -89%;
+    width: 15rem;
+    height: 2rem;
+    background: #fff;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+.topbar .search-form input{
+    height: 100%;
+    left: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1rem;
+    color: black;
+    padding: 0 1rem;
+}
+.topbar .search-form label{
+    font-size: 1.2rem;
+    padding-right: 1rem;
+    color: #111;
+    cursor: pointer;
+}
+.topbar .search-form label:hover{
+    color: var(--primary);
+}
+.topbar .search-form.active{
+    left: 2rem;
+    transition: .4s linear;
+}
+
+
+/*-----2nd nav---*/
+nav .top{
+    padding: 1.5rem 0;
+}
+nav .top .contact h5, nav .top .time h5{
+    font-family: "Raleway-black";
+    margin-bottom: 0.25rem;
+}
+nav .top .contact h6, nav .top .time h6{
+    font-family: "Raleway-medium";
+    letter-spacing: 0.055rem;
+    font-size: 0.75rem;
+    color: var(--ternary);
+}
+nav .top .contact img, nav .top .time img{
+    margin-right: 1rem;
+}
+
+
+
+/*----3eme nav---*/
+ .justify-center{
+     justify-content: center;
+ }
+nav .navbar a{
+    text-decoration: none;
+    color: var(--secondary);
+    font-family: "Raleway-semibold";
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    transition:all .3s ease;
+    -webkit-transition:all .3s ease;
+    -moz-transition:all .3s ease;
+    -ms-transition:all .3s ease;
+    -o-transition:all .3s ease;
+}
+nav .navbar a.active{
+    /* background: var(--primary); */
+    color: var(--primary);
+}
+/* nav .navbar a:hover{
+    background: var(--primary);
+    color: var(--pure);
+} */
+.magic-shadow{
+    position: relative;
+    background: var(--heaven);
+}
+.magic-shadow:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 69px;
+    background-image: url(../icons/shadow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: -22px;
+    z-index: -1;
+}
+/*------hover----*/
+/* #MenuItems a:hover {
+        
+    color: orange;
+    } */
+
+/*-----color for active page----*/
+/* .container .navbar a.active {
+   
+    } */
+/*----shadow for product page---*/
+/* 
+.magic-shadow-sm{
+    position: relative;
+    background: var(--heaven);
+}
+.magic-shadow-sm:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 69px;
+    background-image: url(../icons/shadow-sm.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: -20px;
+    z-index: -1;
+} */
+
+/*-----header 1er home page */
+header.hero{
+    height: 500px;
+    background-image: url(../images/pexels-teona-swift-6874239.jpg);
+    /* background-color:peru; */
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+header.hero .container{
+    position: relative;
+    margin-top: -5.75rem;
+}
+header.hero .welcome{
+    margin-bottom:0.25rem;
+}
+header.hero .welcome span{
+    font-family: "Raleway-bold";
+    color: var(--heaven);
+    margin-right: 0.75rem;
+}
+header.hero h1{
+    font-family: "Raleway-extrabold";
+    color: var(--heaven);
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+header.hero h1 span{
+    color: var(--primary);
+}
+header.hero p{
+    font-family: "Raleway-medium";
+    width: 50%;
+    line-height: 1.5;
+    margin: 1rem;
+    color: var(--heaven);
+}
+.btn{
+    padding: 0.75rem 0.75rem;
+    border-radius: 4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    -ms-border-radius:4px;
+    -o-border-radius:4px; 
+    line-height: 0.8;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+.btn-primary{
+    background: var(--primary);
+    color: var(--heaven);
+}
+.btn-primary:hover{
+    background: var(--heaven);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+.btn-secondary{
+    background: var(--secondary);
+    color: var(--heaven);
+}
+.btn-secondary:hover{
+    background: var(--heaven);
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+
+header.hero button:first-child{
+    margin-right: 0.50rem;
+}
