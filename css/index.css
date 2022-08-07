@@ -20,7 +20,7 @@
     --bg-color: #fff;
     --scroll-bar-color: hsl(250, 12%, 90%);
     --scroll-thumb-color: hsl(250, 12%, 80%);
-} 
+}
 body{
     color: var(--text-color);
 }
@@ -83,8 +83,222 @@ body{
     margin: 0 auto;
 }
 
-/*----header-----*/
+/*----media query for product page*/
+@media (max-width:991px){
+    .produc-preview .preview img{
+        height: 6rem;
+    }
+}
 
+@media (max-width:768px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .footer{
+        text-align: center;
+    }
+}
+
+/*--------end of the media for product page*/
+
+
+/*----- media query for contact page---*/
+
+@media (max-width:991px){
+    .contactt{
+        padding: 50px;
+    }
+    .contaiiner{
+       flex-direction: column;
+    }
+    .contaiiner .contactInfo{
+        margin-bottom: 40px;
+    }
+    .contaiiner .contactInfo,
+    .contactForm {
+        width: 100%;
+    }
+} 
+
+
+/*----- end of media query for contact page---*/
+
+/* media for home page */
+@media (min-width:576px){
+    .container{
+        max-width: 540px;
+    }
+}
+@media (min-width:768px){
+    .container{
+        max-width: 720px;
+    }
+}
+
+@media (min-width:992px){
+    .container{
+        max-width: 960px;
+    }
+}
+
+@media (min-width:1200px){
+    .container{
+        max-width: 1152px;/*nav*/
+    }
+}
+ 
+
+/* end of media query for home page*/
+
+/* partie de responsive*/
+
+.main-wrapper{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+.nav-background{
+    width:100%;
+    height:100%;
+    background:var(--light);
+    position: absolute;
+    top:0;
+    left:0;
+    padding:0;
+    z-index:1;
+}
+
+.nav-trigger{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:1; 
+   
+    display: none;
+}
+
+.nav-trigger svg{
+    transform:rotate(90deg) scaleX(-1);
+    -webkit-transform:rotate(90deg) scaleX(-1);
+    -moz-transform:rotate(90deg) scaleX(-1);
+    -ms-transform:rotate(90deg) scaleX(-1);
+    -o-transform:rotate(90deg) scaleX(-1);
+    width:60px;
+    height:60px;
+} 
+
+.site-content-wrapper{
+  width:100%;
+  height:100%;
+  position:absolute;
+  background: var(--heaven);
+  z-index:2;
+  transition:all .3s ease;
+  -webkit-transition:all .3s ease;
+  -moz-transition:all .3s ease;
+  -ms-transition:all .3s ease;
+  -o-transition:all .3s ease;
+}
+ 
+.site-content-wrapper.scaled{ 
+  transform:scale(0.9) translateX(90%);
+  -webkit-transform:scale(0.9) translateX(90%);
+  -moz-transform:scale(0.9) translateX(90%);
+  -ms-transform:scale(0.9) translateX(90%);
+  -o-transform:scale(0.9) translateX(90%);
+  border-radius:3px;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  -ms-border-radius:3px;
+  -o-border-radius:3px;
+  box-shadow:0 3px 10px 0 var(--secondary);
+}
+
+.site-content{
+  width:100%;
+  height:100%;
+  overflow-x:auto;
+} 
+
+
+
+.nav-background .mobile-logo{
+    padding: 1rem;
+}
+.nav-background .mobile-nav ul{
+        list-style-type: none;
+}
+.nav-background .mobile-nav ul li{
+    margin-bottom: 1rem;
+}
+.nav-background .mobile-nav ul li a{
+    text-decoration: none;
+    color: var(--secondary);
+    font-family: "Raleway-medium";
+}
+.nav-background .mobile-nav ul li a:hover{
+    color: var(--primary);
+}
+.nav-background .contact, .nav-background .time{
+     padding: 1rem; 
+     padding-left: 0;
+}
+.nav-background .contact img, .nav-background .time img{
+    margin-right: 1rem;
+}
+.nav-background .contact h5, .nav-background .time h5{
+       font-family: "Raleway-bold";
+       margin-bottom: 0.25rem;
+       font-size: 1rem;
+
+}
+.nav-background .contact h6,.nav-background .time h6{
+    font-size: 0.75rem;
+}
+.nav-background .cart{
+    margin-bottom: 2rem;
+}
+.nav-background .cart a{
+    color: var(--secondary);
+    text-decoration: none;
+    font-family: "Raleway-bold";
+}
+.nav-background .cart img{
+    margin-right: 0.75rem;
+    width: 20px;
+    height: 20px;
+}
+/* .nav-background .mobile-nav{
+    padding: 1rem;
+} */
+
+
+
+
+
+/* media query pour que la toutes les 3 nav disparaissent qd we reach this nbre*/
+@media (max-width:992px){
+    .nav-trigger{
+        display: block;
+    }
+    header.topbar, nav{ 
+        display: none;
+    }
+
+    
+}
+
+/* end of responsive*/
+
+/*----header-----*/
 header.topbar{
     background:var(--secondary);
     color: var(--pure);/*for span |*/
@@ -152,6 +366,8 @@ header.topbar .auth > div img{
     left: 2rem;
     transition: .4s linear;
 }
+/* end of search bar*/
+
 
 
 /*-----2nd nav---*/
@@ -247,6 +463,7 @@ nav .navbar a.active{
 header.hero{
     height: 500px;
     background-image: url(../images/pexels-teona-swift-6874239.jpg);
+    background-size: cover;
     /* background-color:peru; */
     background-position: 0% 0%;
     background-repeat: no-repeat;
@@ -319,3 +536,4 @@ header.hero p{
 header.hero button:first-child{
     margin-right: 0.50rem;
 }
+

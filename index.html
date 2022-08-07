@@ -6,10 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FarissoGaz</title>
     <link rel="stylesheet" href="css/index.css">
+    <!--css import from slick slide -->
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" rel="stylesheet">
 
     <!---box icons-->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-
+    <!---js custome-->
+    <script src="js/app.js" defer></script>
+    <!--bootstrap css-->
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
     <!--google font-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -19,50 +26,47 @@
 </head>
 
 <body>
-    <header class="topbar">
-        <div class="container flex justify-between items-center">
-                <div class="icons"> <!--first nav a gauche -->
-                <a href="#"><img src="./icons/facebook.svg" alt=""></a>
-                <a href="#"><img src="./icons/twitter.svg" alt=""></a>
-                <!-- <a href="#"><img src="./icons/google.svg" alt=""></a> -->
-                <a href="#"><img src="./icons/instagram.svg" alt=""></a>
-                <div style="cursor: pointer;" class="fas fa-search" id="search-btn"></div>
-                <!-- <a href="#"><img src="./icons/search.svg" alt=""></a>  -->
-                </div>
-                <div class="auth flex items-center"> <!--first nav a droite -->
-                <div>
-                    <a href="account.html"><img src="./icons/user-icon.svg" alt=""></a> 
-                    <a href="account.html">Login/Register</a>
-                </div>
-                <span class="divider">|</span>
-                <!-- <div>
-                    <img src="./icons/edit.svg" alt="">
-                    <a href="#">Register Now</a>
-                </div>
-                <span class="divider">|</span> -->
-                <!-- <div>
-                    <img src="./icons/user-icon.svg" alt="">
-                    <a href="#"></a>
-                </div>
-                <span class="divider">|</span> -->
-                <div>
-                        
-                        <a href="cart.html"><img src="./icons/cart.svg" alt=""></a>
-                </div>
 
-                </div> 
-                <form action="" class="search-form">
-                    <input type="search" id="search-box" placeholder="search here...">
-                    <!-- <label for="search-box" class="fas fa-search"></label> -->
-    
-                </form>
+<!----menu bar and responsive les 3 nav-->
+      
+
+    <div class="main-wrapper">
+        <div class="nav-background">
+            <div class="mobile-logo">
+                <a href="index.html"><img class="cart-icon" src="./icons/LogoMakr-5EHAoM.png" alt=""></a>
             </div>
-            
-     </header>
-<!--2eme nav-->
-     <nav>
-         <div class="top">
-             <div class="container flex justify-between">
+            <div style="padding: 1rem;" class="moblie-nav">
+                <div class="cart">
+                    <div class="flex items-center">
+                        <img src="./icons/cart-dark.svg" alt="">
+                        <a href="cart.html"> Items</a>
+                    </div>
+                </div>
+                <div class="nav-top">
+                    <ul>
+                        <li style="margin-bottom: 1rem;">
+                            <a href="#index" class="active">Home</a>
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <a href="product.html">Products</a>
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <a href="about.html">About us</a>
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <a href="cart.html">cart</a>
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <a href="orders.html">orders</a>
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <a href="faqs.html">Faq's</a>
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <a href="contact.html">Contact us</a>
+                        </li> 
+                    </ul>
+                </div>
                 <div class="contact flex items-center">
                     <img src="./icons/phone.svg" alt="">
                     <div>
@@ -70,52 +74,395 @@
                         <h6>E-mail: support@farissogaz.com</h6>
                     </div>
                 </div>
-                <div class="branding">
-                    <a href="index.html"><img class="cart-icon" src="./icons/LogoMakr-5EHAoM.png" alt=""></a>
-                    
-                </div> 
-                <div class="time  flex items-center">
+                <div class="time flex items-center">
                     <img src="./icons/clock.svg" alt="">
                     <div>
                         <h5>Working Hours:</h5>
                         <h6>Mon - Sun(8.00am - 10.00 am)</h6>
                     </div>
                 </div>  
-             </div>
-         </div>
-         <!--3eme nav-->
-         <div class="navbar magic-shadow">
-             <div class="container flex justify-center">
-                 <a href="#index" class="active">Home</a>
-                 <a href="product.html">Products</a>
-                 <!-- <a href="partners.html">Partners</a> -->
-                 <a href="about.html">About us</a>
-                 <a href="cart.html">cart</a>
-                 <a href="orders.html">orders</a>
-                 <a href="faqs.html">Faq's</a>
-                 <a href="contact.html">Contact us</a>
-                 
-             </div>
-         </div>
-     </nav>
-<!--home page 1er div-->
-     <header class="hero flex items-center">
-         <div class="container">
-             <div class="welcome flex items-center">
-                <span>Welcome to <new style="color:var(--primary);"> FarissoGas</new></span>
-             </div>
-             <h1>The best <span>LP gas</span> delivery website</h1>
-             <p>SAVE MONEY, SAVE TIME. Our mission is always to deliver LP GAS to a wide range of population in a timely manner while emphasizing Fastness, Safeness and Reliability.</p>
-             <div>
-                 <a href="about.html"><button class="btn btn-primary">Read more</button></a>
-                 <a href="orders.html"><button class="btn btn-secondary">Order Now</button></a>
-             </div>
-             <!-- <div class="hero-image">
-                 <img src="./icons/LogoMakr-1ETHQl.png" alt="">
-                 
-             </div> -->
-         </div>
-     </header>
+            </div>
+        </div>
+        <div class="site-content-wrapper">
+            <div class="nav-trigger">
+                <svg style="padding: 15px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-bar-chart">
+                    <line x1="12" y1="20" x2="12" y2="10" />
+                    <line x1="18" y1="20" x2="18" y2="4" />
+                    <line x1="6" y1="20" x2="6" y2="16" /></svg>
+            </div>
+            <div class="site-content">
+                <header class="topbar">
+                    <div class="container flex justify-between items-center">
+                            <div class="icons"> <!--first nav a gauche -->
+                            <a href="#"><img src="./icons/facebook.svg" alt=""></a>
+                            <a href="#"><img src="./icons/twitter.svg" alt=""></a>
+                            <!-- <a href="#"><img src="./icons/google.svg" alt=""></a> -->
+                            <a href="#"><img src="./icons/instagram.svg" alt=""></a>
+                            <div style="cursor: pointer;" class="fas fa-search" id="search-btn"></div>
+                            <!-- <a href="#"><img src="./icons/search.svg" alt=""></a>  -->
+                            </div>
+                            <div class="auth flex items-center"> <!--first nav a droite -->
+                            <div>
+                                <a href="#"><img src="./icons/user-icon.svg" alt=""></a> 
+                                <a href="#">Login/Register</a>
+                            </div>
+                            <span class="divider">|</span>
+                            <!-- <div>
+                                <img src="./icons/edit.svg" alt="">
+                                <a href="#">Register Now</a>
+                            </div>
+                            <span class="divider">|</span> -->
+                            <!-- <div>
+                                <img src="./icons/user-icon.svg" alt="">
+                                <a href="#"></a>
+                            </div>
+                            <span class="divider">|</span> -->
+                            <div>
+                                    
+                                    <a href="#"><img src="./icons/cart.svg" alt=""></a>
+                            </div>
+            
+                            </div> 
+                            <!-- <form action="" class="search-form"> 
+                                <input type="search" id="search-box" placeholder="search here..."> -->
+                                <!-- <label for="search-box" class="fas fa-search"></label> -->
+                
+                            <!-- </form> -->
+                        </div>
+                        
+                 </header>
+            <!--2eme nav-->
+                 <nav>
+                     <div class="top">
+                         <div class="container flex justify-between">
+                            <div class="contact flex items-center">
+                                <img src="./icons/phone.svg" alt="">
+                                <div>
+                                    <h5>Call US:(+250788228228)</h5>
+                                    <h6>E-mail: support@farissogaz.com</h6>
+                                </div>
+                            </div>
+                            <div class="branding">
+                                <a href="index.html"><img class="cart-icon" src="./icons/LogoMakr-5EHAoM.png" alt=""></a>
+                                
+                            </div> 
+                            <div class="time  flex items-center">
+                                <img src="./icons/clock.svg" alt="">
+                                <div>
+                                    <h5>Working Hours:</h5>
+                                    <h6>Mon - Sun(8.00am - 10.00 am)</h6>
+                                </div>
+                            </div>  
+                         </div>
+                     </div>
+                     <!--3eme nav-->
+                     <div class="navbar magic-shadow">
+                         <div class="container flex justify-center">
+                             <a href="#index" class="active">Home</a>
+                             <a href="#">Products</a>
+                             <!-- <a href="partners.html">Partners</a> -->
+                             <a href="#">About us</a>
+                             <a href="#">cart</a>
+                             <a href="#">orders</a>
+                             <a href="#">Faq's</a>
+                             <a href="#">Contact us</a>
+                             
+                         </div>
+                     </div>
+                 </nav>
+            <!--home page 1er div-->
+                 <header class="hero flex items-center">
+                     <div class="container">
+                         <div class="welcome flex items-center">
+                            <span>Welcome to <new style="color:var(--primary);"> FarissoGas</new></span>
+                         </div>
+                         <h1>The best <span>LP gas</span> delivery website</h1>
+                         <p>SAVE MONEY, SAVE TIME. Our mission is always to deliver LP GAS to a wide range of population in a timely manner while emphasizing Fastness, Safeness and Reliability.</p>
+                         <div>
+                             <a href="about.html"><button class="btn btn-primary">Read more</button></a>
+                             <a href="orders.html"><button class="btn btn-secondary">Order Now</button></a>
+                         </div>
+                         <!-- <div class="hero-image">
+                             <img src="./icons/LogoMakr-1ETHQl.png" alt="">
+                             
+                         </div> -->
+                     </div>
+                 </header>
+            
+                    <div class="produc-preview"></div> 
+          
+            </div>
+        </div>
+    </div>
+
+
+
+    <!----end of menu bar and responsive -->
+
+
+
+
+            
+       
+
+  <!--sript for brands--> 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+ 
+       
+
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <section class="services" id="services">
+            <div class="headin">
+                <span></span>
+                <h2 class="section-title">We provide you a best services</h2>
+            </div>
+
+            <div class="services-container">
+                <div class="s-box">
+                    <img src="images/orderr.webp" alt="">
+                    <h3>You order</h3>
+                    <p>We have several varieties product you can choose from.</p>
+                </div>
+
+                <div class="s-box">
+                    <img src="images/ship.png" alt="">
+                    <h3>Shipping</h3>
+                    <p>Once your order is set, we move to the next step which is shipping.</p>
+                </div>
+
+                <div class="s-box">
+                    <img src="images/delivv.png" alt="">
+                    <h3>Get order Delivered</h3>
+                    <p>Our delivery process is easy, you receive the order direct to your home and enjoy your meal.</p>
+                </div>
+            </div>
+        </section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+    <section class="shop container">
+    <h2 class="section-title">Explore our product</h2> 
+   
+    <div class="shop-content">
+       
+        <div>
+            <img class="product-img" src="img/product1.jpg" alt="">
+            <h2>Gas 12kg</h2>
+            <span class="price">$24</span>
+            <i class='bx bx-shopping-bag' add-cart></i>
+        </div>
+       
+         <div>
+            <img class="product-img" src="img/product1.jpg" alt="">
+            <h2>Gas 12kg</h2>
+            <span class="price">$24</span>
+            <i class='bx bx-shopping-bag' add-cart></i>
+        </div>
+        
+         <div>
+            <img class="product-img" src="img/product1.jpg" alt="">
+            <h2>Gas 12kg</h2>
+            <span class="price">$24</span>
+            <i class='bx bx-shopping-bag' add-cart></i>
+        </div>
+         
+
+    </div>
+
+   </section>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <!-- <section class="top-products">
+         <div class="container">
+            <h1 class="section-heading">Explore our product</h1>
+             <div class="slider">
+                 <button class="slider-btn prev-btn"><img src="./icons/pre.svg" alt=""></button>
+                 <button class="slider-btn next-btn"><img src="./icons/next.svg" alt=""></button>
+
+                 <div class="gas-slider">
+                     <div class="gas-card magic-shadow-sm">
+                         <div class="product-image flex items-center justify-center">
+                             <img src="./images/gass.png" alt="">
+                         </div>
+                         <hr>
+                         <div>
+                             <h2 class="text-center">Bottle of Gas</h2>
+                             <div class="stars flex justify-center items-center ">
+                                 <img src="./icons/start-filled.svg" alt="">
+                                 <img src="./icons/start-filled.svg" alt="">
+                                 <img src="./icons/start-filled.svg" alt="">
+                                 <img src="./icons/star-grey.svg" alt="">
+                                 <img src="./icons/star-grey.svg" alt="">
+                             </div>
+                             <div class="price text-center">
+                                 $ 25
+                             </div>
+                             <div class="flex justify-center">
+                                 <button>
+                                     <img src="./icons/cart-2.svg" alt="">
+                                     <span>Add to cart</span>
+                                 </button>
+                             </div>
+                         </div>
+                     </div>
+
+                     <div class="gas-card magic-shadow-sm">
+                        <div class="product-image flex items-center justify-center">
+                            <img src="./images/gass.png" alt="">
+                        </div>
+                        <hr>
+                        <div>
+                            <h2 class="text-center">Bottle of Gas 12kg</h2>
+                            <div class="stars flex justify-center items-center ">
+                                <img src="./icons/start-filled.svg" alt="">
+                                <img src="./icons/start-filled.svg" alt="">
+                                <img src="./icons/start-filled.svg" alt="">
+                                <img src="./icons/star-grey.svg" alt="">
+                                <img src="./icons/star-grey.svg" alt="">
+                            </div>
+                            <div class="price text-center">
+                                $ 25
+                            </div>
+                            <div class="flex justify-center">
+                                <button>
+                                    <img src="./icons/cart-2.svg" alt="">
+                                    <span>Add to cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gas-card magic-shadow-sm">
+                        <div class="product-image flex items-center justify-center">
+                            <img src="./images/gass.png" alt="">
+                        </div>
+                        <hr>
+                        <div>
+                            <h2 class="text-center">Bottle of Gas 15kg</h2>
+                            <div class="stars flex justify-center items-center ">
+                                <img src="./icons/start-filled.svg" alt="">
+                                <img src="./icons/start-filled.svg" alt="">
+                                <img src="./icons/start-filled.svg" alt="">
+                                <img src="./icons/star-grey.svg" alt="">
+                                <img src="./icons/star-grey.svg" alt="">
+                            </div>
+                            <div class="price text-center">
+                                $ 25
+                            </div>
+                            <div class="flex justify-center">
+                                <button>
+                                    <img src="./icons/cart-2.svg" alt="">
+                                    <span>Add to cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="gas-card magic-shadow-sm">
+                        <div class="product-image flex items-center justify-center">
+                            <img src="./images/gass.png" alt="">
+                        </div>
+                        <hr>
+                        <div>
+                            <h2 class="text-center">Bottle of Gas 15kg</h2>
+                            <div class="stars flex justify-center items-center ">
+                                <img src="./icons/start-filled.svg" alt="">
+                                <img src="./icons/start-filled.svg" alt="">
+                                <img src="./icons/start-filled.svg" alt="">
+                                <img src="./icons/star-grey.svg" alt="">
+                                <img src="./icons/star-grey.svg" alt="">
+                            </div>
+                            <div class="price text-center">
+                                $ 25
+                            </div>
+                            <div class="flex justify-center">
+                                <button>
+                                    <img src="./icons/cart-2.svg" alt="">
+                                    <span>Add to cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div> 
+
+                 </div>
+
+             </div>
+
+              <div class="text-center btn-wrapper">
+                  <button class="btn btn-secondary">View More</button>
+
+              </div>
+         </div>
+
+     </section>
+
+  
+     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+     <script src="./js/app.js"></script> -->
