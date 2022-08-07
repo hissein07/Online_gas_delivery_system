@@ -1,4 +1,126 @@
 
+$(document).ready(function(){
+  $('.nav-trigger').click(function(){
+     $('.site-content-wrapper').toggleClass('scaled');
+  });  
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //product page
 let previewContaine = document.querySelector('.produc-preview');
 let previewBox = previewContaine.querySelectorAll('.preview');
@@ -22,14 +144,3 @@ previewBox.forEach(close =>{
       previewContaine.style.display = 'none';
      };
 });
-
-
-//  responsive 
-
-$(document).ready(function(){
-  $('.nav-trigger').click(function(){
-     $('.site-content-wrapper').toggleClass('scaled');
-  });  
-
-});
-
