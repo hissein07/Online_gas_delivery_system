@@ -100,7 +100,7 @@ body{
 }
 
 
-/* media for home page */
+/* bet */
 @media (min-width:576px){
     .container{
         max-width: 540px;
@@ -125,7 +125,6 @@ body{
 }
  
 
-/* end of media query for home page*/
 
 /* les 3 div pour inserer le menu bar*/
 
@@ -299,45 +298,6 @@ header.topbar .auth > div img{
     align-items: center;
 }
 
-/*----search form*/
-
-.topbar .search-form{
-    position: absolute;
-    top: 08%;
-    left: -89%;
-    width: 15rem;
-    height: 2rem;
-    background: #fff;
-    border-radius: .5rem;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    box-shadow: var(--box-shadow);
-}
-
-.topbar .search-form input{
-    height: 100%;
-    left: 100%;
-    background: none;
-    text-transform: none;
-    font-size: 1rem;
-    color: black;
-    padding: 0 1rem;
-}
-.topbar .search-form label{
-    font-size: 1.2rem;
-    padding-right: 1rem;
-    color: #111;
-    cursor: pointer;
-}
-.topbar .search-form label:hover{
-    color: var(--primary);
-}
-.topbar .search-form.active{
-    left: 2rem;
-    transition: .4s linear;
-}
-/* end of search bar*/
 
 
 
@@ -506,142 +466,4 @@ header.hero p{
 
 header.hero button:first-child{
     margin-right: 0.50rem;
-}
-
-
-
-
-/*-----product----*/
-.containe{
-    max-width: 1200%;
-    margin: 0 auto;
-    padding: 3rem 2rem;
-    background-color: var(--heaven)
-}
-.containe .produc-containe{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    gap: 2rem;
-}
-.containe .produc-containe .produc{
-    text-align: center;
-    padding: 3rem 2rem;
-    background: #fff;
-    box-shadow: 0 .5rem 1rem rgb(0,0,0,0.1);
-    outline: .1rem solid #ccc;
-    outline-offset: -1.5rem;
-    cursor: pointer;
-}
-.containe .produc-containe .produc:hover{
-    outline: .2rem solid #222;
-    outline-offset: 0;
-}
-.containe .produc-containe .produc img{
-    height: 10rem;
-}
-.containe .produc-containe .produc img{
-    transition: scale(.9);
-}
-.containe .produc-containe .produc h3{
-    padding: 1rem 0;
-    font-size: 1.5rem;
-    color: #444;
-}
-.containe .produc-containe .produc .price{
-    font-size: 1.3rem;
-    color: #444;
-}
-.containe .produc-containe .produc:hover h3{
-    color: #ff8159;
-}
-.containe .produc-containe .produc:hover .price{
-    color: var(--primary);
-}
-
-.produc-preview{
-    position: fixed;
-    top: 0; left: 0;
-    min-height: 100vh;
-    width: 100%;
-    background: rgb(0,0,0,.8);
-    display: none;
-    align-items: center;
-    justify-content: center;
-}
-.produc-preview .preview{
-    display: none;
-}
-.produc-preview .preview.activ{
-    display: inline-block;
-    padding: 2rem;
-    text-align: center;
-    background: #fff;
-    position: relative;
-    margin: 2rem;
-    width: 20rem;
-    height: 29rem;
-    margin-top: rem;
-}
-.produc-preview .preview img{
-    height: 8rem;
-}
-
-.produc-preview .preview .fa-times{
-    position: absolute;
-    top: 1rem; right: 1.5rem;
-    cursor: pointer;
-    color: #444;
-    font-size: 2rem;
-}
-
-.produc-preview .preview .fa-times:hover{
-    transform: rotate(90deg);
-}
-
-.produc-preview .preview h3{
-    color: #444;
-    padding: 0.5rem 0;
-    font-size: 1.2rem;
-
-}
-.produc-preview .preview .stars span{
-    color: var(--primary);
-} 
-.produc-preview .preview .stars i{
-    color: var(--primary);
-}
-.produc-preview .preview p{
-    line-height: 1.5rem;
-    padding: 1rem 0;
-    font-size: 1.1rem;
-    color: #777;
-}
-.produc-preview .preview .price{
-    padding: 1rem 0;
-    font-size: 1.5rem;
-    color: var(--primary);
-}
-.produc-preview .preview .button{
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-}
-.produc-preview .preview .button a{
-    flex: 1 1 4rem;
-    padding: 1rem;
-    font-size: 0.7rem;
-    color: #444;
-    border: 0.1rem solid #444;
-}
-.produc-preview .preview .button a.cart{
-    background: #444;
-    color: #fff;
-}
-.produc-preview .preview .button a.cart:hover{
-    background: #111;
-}
-.produc-preview .preview .button a.buy:hover{
-    background: var(--primary);
-    color: #fff;
 }
